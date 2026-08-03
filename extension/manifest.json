@@ -1,0 +1,8 @@
+{
+  "manifest_version":3,"name":"JobTrack Capture","version":"0.1.0",
+  "description":"Save a job listing to your private JobTrack workspace.",
+  "permissions":["activeTab","storage","scripting"],
+  "host_permissions":["http://127.0.0.1:47821/*"],
+  "action":{"default_popup":"popup.html","default_title":"Save to JobTrack"},
+  "content_scripts":[{"matches":["https://www.linkedin.com/jobs/*","https://*.indeed.com/*","https://www.glassdoor.com/*","https://www.kariyer.net/*"],"js":["content.js"],"run_at":"document_idle"}]
+}
